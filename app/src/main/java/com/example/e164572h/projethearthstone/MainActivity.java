@@ -39,8 +39,6 @@ public class MainActivity extends AppCompatActivity {
                 } catch (JSONException je) {
                     Log.e("test JSON", je.getMessage());
                 }
-                //TextView textView = (TextView) findViewById(R.id.textView);
-                //textView.setText(s);
             }
         }, new Response.ErrorListener() {
             public void onErrorResponse(VolleyError error) {
