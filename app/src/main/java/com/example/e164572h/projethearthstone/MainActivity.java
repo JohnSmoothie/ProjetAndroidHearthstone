@@ -5,6 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.android.volley.*;
@@ -22,6 +24,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ///florian daniel
+    }
+
+    public void gestionSpinner(View v) {
+        Spinner spinnerClasse = (Spinner) findViewById(R.id.spinnerClasse);
+        Spinner spinnerType = (Spinner) findViewById(R.id.spinnerType);
+        Spinner spinnerFaction = (Spinner) findViewById(R.id.spinnerFaction);
+        Spinner spinnerRace = (Spinner) findViewById(R.id.spinnerRace);
+        //exemple adapter
+        Integer [] data = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+        ArrayAdapter<Integer> adapter = new ArrayAdapter<Integer>(this, android.R.layout.simple_spinner_dropdown_item, data);
     }
 
     public void jsonVolley(View v) {
